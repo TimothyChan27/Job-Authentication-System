@@ -1,1 +1,4 @@
+Project Description
+This project focuses on detecting fraudulent job postings using machine learning and natural language processing (NLP) techniques. By analyzing job descriptions and related metadata, the system identifies patterns commonly found in fraudulent postings. Key steps in the project include data preprocessing, feature extraction using TfidfVectorizer, and addressing class imbalance with SMOTE. Various machine learning models are trained and evaluated to optimize detection accuracy. The project aims to provide a reliable solution for identifying fake job listings, protecting job seekers from scams while enhancing online job posting security.
+
 Some Files that are missing due to GitHub upload size requirement. This google drive link is an alternative for downloading those files. https://drive.google.com/drive/folders/1wtU8ERZpIE_B2Ocy9SWSwL5FgPin3Mjz?usp=drive_link
