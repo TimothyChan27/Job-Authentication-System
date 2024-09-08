@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Predictions Report</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="title">
+            Fake Job Posting Detection
+        </div>
+        <div class="tabs">
+            <a href="/" class="tab">Home</a>
+            <a href="/view_models" class="tab">Model</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="container-title">Model Predictions Report</h1>
+        <table>
+            <tr>
+                <th>Model</th>
+                <th>Prediction</th>
+            </tr>
+            {% for model, prediction in predictions.items() %}
+            <tr>
+                <td>{{ model }}</td>
+                <td class="{{ 'fake' if prediction == 'Fake' else 'real' }}">{{ prediction }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="{{ url_for('home') }}" class="button">Back</a>
+    </div>
+</body>
+
+</html>

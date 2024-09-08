@@ -1,0 +1,255 @@
+/* General styles for the body and html */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    align-items: center;
+    /* Orange background for the entire navbar */
+    background-color: #FAAB33;
+    padding: 10px;
+    color: black;
+    justify-content: space-between;
+    /* Space out the logo, title, and tabs */
+}
+
+/* Flex container for the title and tabs */
+.navbar-content {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    /* Center the title within the space */
+    position: relative;
+    margin: 0 20px;
+    /* Add horizontal margin for spacing */
+}
+
+.logo {
+    margin-right: 20px;
+    /* Space between logo and title */
+}
+
+.logo-img {
+    height: 40px;
+    /* Adjust the height of the logo */
+}
+
+.title {
+    color: black;
+    /* Text color for the title */
+    font-size: 24px;
+    /* Font size for the title */
+    margin: 0;
+}
+
+/* Tabs container */
+.tabs {
+    display: flex;
+}
+
+.tab {
+    color: black;
+    /* Text color for the tabs */
+    text-decoration: none;
+    /* Remove underline from links */
+    padding: 10px 15px;
+    /* Add padding around the tabs */
+    margin-left: 10px;
+    /* Space between tabs */
+    background-color: #f1f1f1;
+    /* Background color for the tabs */
+    border-radius: 5px;
+    /* Rounded corners for the tabs */
+}
+
+.tab:hover {
+    background-color: #ddd;
+    /* Background color on hover */
+}
+
+/* Container for main content */
+.container {
+    padding: 20px;
+    text-align: center;
+    /* Center content inside the container */
+}
+
+/* Title inside the container */
+.container-title {
+    display: inline-block;
+    /* Make the title behave like an inline element */
+    font-size: 28px;
+    /* Font size for the container title */
+    font-weight: bold;
+    /* Make the title bold */
+    margin-bottom: 20px;
+    /* Space below the title */
+    position: relative;
+    /* Required for the pseudo-element */
+}
+
+/* Underline for the title */
+.container-title::after {
+    content: '';
+    /* Empty content */
+    display: block;
+    /* Make it a block-level element */
+    width: 100%;
+    /* Full width of the title */
+    height: 2px;
+    /* Thickness of the underline */
+    background-color: black;
+    /* Color of the underline */
+    position: absolute;
+    /* Position it absolutely */
+    bottom: -5px;
+    /* Position it below the text */
+    left: 0;
+    /* Align it to the left */
+}
+
+/* Input and button section */
+.input-section {
+    display: flex;
+    /* Use flexbox for alignment */
+    justify-content: center;
+    /* Center items horizontally */
+    gap: 10px;
+    /* Space between input and button */
+}
+
+/* Styled text input area */
+#job-posting-text {
+    padding: 10px;
+    /* Add padding inside the input */
+    font-size: 16px;
+    /* Font size for the input text */
+    border: 1px solid #ccc;
+    /* Border color */
+    border-radius: 5px;
+    /* Rounded corners for the input */
+    width: 300px;
+    /* Width of the input field */
+    background-color: #598cf1;
+    /* Light blue background */
+}
+
+/* Styled button */
+#detect-button {
+    padding: 10px 20px;
+    /* Add padding inside the button */
+    font-size: 16px;
+    /* Font size for the button text */
+    color: black;
+    /* Text color for the button */
+    background-color: #2D55CC;
+    /* Dark blue background */
+    border: none;
+    /* Remove default border */
+    border-radius: 5px;
+    /* Rounded corners for the button */
+    cursor: pointer;
+    /* Pointer cursor on hover */
+}
+
+/* Button hover effect */
+#detect-button:hover {
+    background-color: #002244;
+    /* Slightly darker blue on hover */
+}
+
+.fake {
+    color: red;
+    font-weight: bold;
+}
+
+.real {
+    color: blue;
+    font-weight: bold;
+}
+
+/* Button styling */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #FAAB33;
+    /* Set the background color to FAAB33 */
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    color: black;
+}
+
+.button:hover {
+    background-color: #d9912c;
+}
+
+.fake {
+    color: red;
+    font-weight: bold;
+}
+
+.real {
+    color: blue;
+    font-weight: bold;
+}
+
+table {
+    width: 50%;
+    /* Adjusts the table width to 50% of the container */
+    margin: 0 auto;
+    /* Centers the table horizontally */
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    /* Reduces padding for a more compact look */
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+
+/* Table styling */
+.model-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+
+.model-table th,
+.model-table td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.model-table th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.model-table td {
+    background-color: #fff;
+}
+
+/* Description styling */
+.model-description {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Model Performance Report</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="title">
+            Fake Job Posting Detection
+        </div>
+        <div class="tabs">
+            <a href="/" class="tab">Home</a>
+            <a href="/view_models" class="tab">Model</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="container-title">Model Performance Report</h1>
+
+        <!-- Model Tables -->
+        <div>
+            <!-- Naive Bayes Table -->
+            <h2>Naive Bayes Model</h2>
+            <table class="model-table">
+                <tr>
+                    <th>Metric</th>
+                    <th>Real</th>
+                    <th>Fake</th>
+                </tr>
+                <tr>
+                    <td>Precision</td>
+                    <td> 0.99 </td>
+                    <td> 0.78 </td>
+                </tr>
+                <tr>
+                    <td>Recall</td>
+                    <td> 0.99 </td>
+                    <td> 0.88 </td>
+                </tr>
+                <tr>
+                    <td>F1 Score</td>
+                    <td> 0.99 </td>
+                    <td> 0.83 </td>
+                </tr>
+            </table>
+            <p> <b>Naive Bayes Model: </b> The Naive Bayes model excels with high precision and recall for "Real" job
+                postings (0.99) and performs well in identifying "Fake" postings (precision: 0.78, recall: 0.88). Its
+                high accuracy of <b>0.982</b> indicates effective classification of job postings. </p>
+        </div>
+        <div>
+            <!-- Naive Bayes Table -->
+            <h2>Decision Tree Model</h2>
+            <table class="model-table">
+                <tr>
+                    <th>Metric</th>
+                    <th>Real</th>
+                    <th>Fake</th>
+                </tr>
+                <tr>
+                    <td>Precision</td>
+                    <td> 0.99 </td>
+                    <td> 0.58 </td>
+                </tr>
+                <tr>
+                    <td>Recall</td>
+                    <td> 0.97 </td>
+                    <td> 0.72 </td>
+                </tr>
+                <tr>
+                    <td>F1 Score</td>
+                    <td> 0.98 </td>
+                    <td> 0.64 </td>
+                </tr>
+            </table>
+            <p>
+                <b>Decision Tree Model:</b> The Decision Tree model demonstrates strong performance with high
+                precision for "Real" job postings (0.99) and good recall across both "Real" and "Fake" categories.
+                It achieves a high accuracy of <b>0.961</b>, reflecting its effective classification capabilities.
+            </p>
+        </div>
+        <div>
+            <!-- Naive Bayes Table -->
+            <h2> KNN Model</h2>
+            <table class="model-table">
+                <tr>
+                    <th>Metric</th>
+                    <th>Real</th>
+                    <th>Fake</th>
+                </tr>
+                <tr>
+                    <td>Precision</td>
+                    <td> 1.00 </td>
+                    <td> 0.20 </td>
+                </tr>
+                <tr>
+                    <td>Recall</td>
+                    <td> 0.80 </td>
+                    <td> 0.98 </td>
+                </tr>
+                <tr>
+                    <td>F1 Score</td>
+                    <td> 0.89 </td>
+                    <td> 0.33 </td>
+                </tr>
+            </table>
+            <p>
+                <b>KNN Model:</b> The KNN model excels with perfect precision for "Real" job postings (1.00)
+                and high recall for "Fake" postings (0.98). It achieves an overall accuracy of <b>0.804</b>,
+                highlighting its strong performance in identifying "Fake" postings while maintaining excellent
+                precision for "Real" postings.
+            </p>
+
+        </div>
+        <div>
+            <!-- Naive Bayes Table -->
+            <h2>BERT Model</h2>
+            <table class="model-table">
+                <tr>
+                    <th>Metric</th>
+                    <th>Real</th>
+                    <th>Fake</th>
+                </tr>
+                <tr>
+                    <td>Precision</td>
+                    <td> 0.96 </td>
+                    <td> 0.71 </td>
+                </tr>
+                <tr>
+                    <td>Recall</td>
+                    <td> 1.00 </td>
+                    <td> 0.10 </td>
+                </tr>
+                <tr>
+                    <td>F1 Score</td>
+                    <td> 0.98 </td>
+                    <td> 0.17 </td>
+                </tr>
+            </table>
+            <p>
+                <b>BERT Model:</b> The BERT model excels in identifying "Real" job postings with high
+                precision (0.96) and perfect recall (1.00). It shows a strong overall accuracy of <b>0.954</b>,
+                indicating its effectiveness in detecting real postings, despite being less effective with "Fake"
+                postings.
+            </p>
+        </div>
+        <div>
+            <!-- Naive Bayes Table -->
+            <h2>Ensemble Learning (Stacking) Model</h2>
+            <table class="model-table">
+                <tr>
+                    <th>Metric</th>
+                    <th>Real</th>
+                    <th>Fake</th>
+                </tr>
+                <tr>
+                    <td>Precision</td>
+                    <td> 0.99 </td>
+                    <td> 0.80 </td>
+                </tr>
+                <tr>
+                    <td>Recall</td>
+                    <td> 0.99 </td>
+                    <td> 0.87 </td>
+                </tr>
+                <tr>
+                    <td>F1 Score</td>
+                    <td> 0.99 </td>
+                    <td> 0.83 </td>
+                </tr>
+            </table>
+            <p>
+                <b>Ensemble Learning (Stacking) Model:</b> The Stacking model delivers high precision and
+                recall for both "Real" (0.99) and "Fake" (0.80) postings. With an accuracy of <b>0.983</b>, it
+                effectively integrates strengths from various models, demonstrating robust overall performance.
+            </p>
+        </div>
+        <a href="{{ url_for('home') }}" class="button">Back</a>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fake Job Posting Detection</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="title">
+            Fake Job Posting Detection
+        </div>
+        <div class="tabs">
+            <a href="/" class="tab">Home</a>
+            <a href="/view_models" class="tab">Model</a>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 class="container-title">Verify Job Posting</h1>
+        <div class="input-section">
+            <form action="/predict" method="post">
+                <input type="text" name="text" id="job-posting-text" placeholder="Enter job posting text here...">
+                <button id='detect-button' type="submit">Detect</button>
+            </form>
+        </div>
+        {% if results %}
+        <h2 id="result" class="container-title">Predicted Results</h2>
+        <p id="prediction-result">This Job Posting is <span class="{{ 'fake' if 'Fake' in results else 'real' }}">{{
+                results
+                }}</span>.</p>
+
+        <div class="report-section">
+            <a href="{{ url_for('view_report', predictions=predictions) }}" id="view-report-button" class="button">View
+                Report</a>
+        </div>
+        {% endif %}
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
